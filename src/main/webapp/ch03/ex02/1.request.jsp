@@ -5,7 +5,7 @@
 	<li>프로토콜: <%= request.getProtocol() %></li> <!-- HTTP/1.1 -->
 	<li>서버: <%= request.getServerName() %></li> <!-- localhost -->
 	<li>ContextPath: <%= request.getContextPath() %></li> <!-- /servlet -->
-	<li>QueryString: <%= request.getQueryString() %></li> <!-- null -->
+	<li>QueryString: <%= request.getQueryString() %></li> <!-- null  - 파라미터 -->
 	<li>요청방식: <%= request.getMethod() %></li> <!-- GET -->
 	<li>포트번호: <%= request.getServerPort() %></li>
 </ul>

@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<form action='4.multiOut.jsp'>
+	<fieldset>
+		<input type='checkbox' name='letter' value='politics'/>정치
+		<input type='checkbox' name='letter' value='economics'/>경제
+		<input type='checkbox' name='letter' value='culture'/>문화
+	</fieldset>
+	
+	<fieldset>
+		<input type='radio' name='gender' value='male'/>남
+		<input type='radio' name='gender' value='female'/>여
+	</fieldset>
+	
+	<fieldset>
+		<select name='job' multiple>
+			<option value='developer'>개발자</option>
+			<option value='planner'>기획자</option>
+			<option value='dba'>DBA</option>			
+		</select>
+	</fieldset>
+	
+	<input type='submit'/>
+</form>
+
+
+<!-- 파라미터 n개일때는 많이없다함. 개념만 익히자. 나중되면 안쓴다함 -->
+<!-- 파라미터 value가 n개 일때 -->
+<!-- 서블릿은 파라미터 value를 string 배열로 만듬 -->
+<!-- 파라미터(name='Letter')는 1개, 파라미터 value가 n개 -->
+
+<!-- checkbox - 복수선택 (비배타적) / radio - 단수선택 (배타적) -->
+<!-- 
+	radio는 멀티value가 나올 수 없음.
+
+	멀티 value를 만들 수 있는 환경
+	1. fieldset
+	2. select
+
+
+ -->

@@ -20,5 +20,9 @@
 	정적인 화면 - include 디렉티브를 사용  ( b가 static할때 )
 	동적인 화면 - 자주 바뀔때는, include action tage를 사용 ( b가 dynamic 할때 )
 	
+	include 디렉티브
+	-> %@ include file="포함될 파일의 url" %>
 	
+	include action tag
+	-> <jsp:include page="포함될 페이지" flush="false" />
 -->
