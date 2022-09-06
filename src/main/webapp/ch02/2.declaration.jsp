@@ -10,7 +10,7 @@
    int num2 = 2; // 지역변수
 %>
 <%= num1 %> + <%= num2 %> = <%= add(num1, num2) %>
-
+<!--  jsp service에서 add method를 call한 것 -->
 <!-- declare - 멤버 메서드(jsp service - servlet class)를 추가하고싶을때 사용 -->
 <!-- num1, num2, add(num1, num2) = print -->
 <!--  + =  => write -->

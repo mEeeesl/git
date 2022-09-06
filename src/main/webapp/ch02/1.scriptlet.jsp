@@ -1,6 +1,7 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%> 
 <%-- directive 주석
 	scriptlet - 안에는 java코드가 들어가고, 밖에는 html 코드가 들어감
+	jsp 주석은 class에 들어가지 않음
 --%>
 <% // scriptlet
 	int num1 = 1; // 지역변수
