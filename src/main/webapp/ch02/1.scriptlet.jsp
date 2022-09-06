@@ -3,7 +3,7 @@
 	scriptlet - 안에는 java코드가 들어가고, 밖에는 html 코드가 들어감
 --%>
 <% // scriptlet
-	int num1 = 1;
+	int num1 = 1; // 지역변수
 	int num2 = 2;
  %>
  <h2>더하기</h2>
