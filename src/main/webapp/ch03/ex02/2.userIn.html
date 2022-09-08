@@ -15,11 +15,17 @@
 <!-- form의 method 기본값이 get이기 때문이다. -->
 <!-- userOut.jsp가 실행된다는건 request를 받아야 servlet이 실행되는거래  -->
 
-<!-- get은 파라미터를 QueryString이 되고, URL이 되게함 -->
+<!-- get은 파라미터를 QueryString이 되게 하고, URL이 되게함 -->
 <!-- 주소창에 아이디 비번 입력한게 주소창 URL에 나옴 -->
 <!-- http://localhost/servlet/ch03/ex02/2.userOut.jsp?userName=%E3%85%97&age=4&birthday=2022-08-30 -->
 <!-- ?userName=ㅗ&age=4&birthday=2022-08-30 < 이 부분-->
-<!-- request get에서 파라미터는 URL이라서 head에 저장된다 -->
+<!-- request get에서 파라미터는 URL이라서 head에 text로 저장된다 -->
 
+<!-- request post는 파라미터를 URL에 안띄우고, request body에 text형태로 저장된다. -->
+<!-- request post는 파라미터를 바이너리(0, 1)로 본다? -->
 <!-- Post는 파라미터를 URL에 안띄움 -->
 <!-- 네이버 로그인할때 아이디 비번 치면 그 값이 주소값에 나오면 안되니까 POST -->
+
+<!-- 파라미터 밸류는 text.
+	 동영상은 Post 일수밖에없다.?
+-->

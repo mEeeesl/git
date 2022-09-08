@@ -2,7 +2,8 @@
 본문
 <hr>
 <jsp:include page='4.footer.jsp'/>
-<!-- ▲ action tag = java code로 번역되는 tag 
+
+<!-- ▲ action tag = java code로 번역되는 tag, 동적인 화면
 	속성명 page (논리적) - 현재 page url을 기준으로, 상대주소를 적음.
 	
 	work folder를 보면, footer class와 includeA class가 생성됨
@@ -26,3 +27,18 @@
 	include action tag
 	-> <jsp:include page="포함될 페이지" flush="false" />
 -->
+
+<!-- page 
+	1. 유저 - 화면
+	2. 개발자 - 코드의 집합
+
+	include page= > 코드를 통합시킨다. ( 여기선 html )
+	
+	include 디렉티브 
+	> 자바코드를 통합시킴
+	include action
+	> html 코드를 통합
+	
+	file은 물리적 page는 논리적	
+	
+ -->

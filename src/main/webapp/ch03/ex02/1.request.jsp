@@ -12,3 +12,6 @@
 
 <!-- jsp - class - servlet이 일함 -->
 <!-- html - ? -->
+<!-- request type을 따로 정하지 않으면, get이 기본값
+	post type을 하려면, form - method='post'
+ -->
