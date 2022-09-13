@@ -5,5 +5,3 @@
 	user.setAge(2);
 %>
 <jsp:forward page='4.requestC.jsp'/>
-
-<!-- -->

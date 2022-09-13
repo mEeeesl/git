@@ -7,9 +7,9 @@
 	int num1 = 1; // 지역변수
 	int num2 = 2;
  %>
- <h2>더하기</h2>
+ <h2>더하기</h2> <%-- out.write --%>
  <%= num1 %> + <%= num2 %> = <%= num1 + num2 %> <!-- expression -->
-
+<!-- ▲ out.print -->
 
 <!-- 
 

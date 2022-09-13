@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/ch01/home/add")
 public class GetPost extends HttpServlet {
-   @Override
+   @Override	//service = get , post 둘 다 받음
    public void service(HttpServletRequest req, HttpServletResponse res) 
       throws ServletException, IOException{
       int num1 = 1;

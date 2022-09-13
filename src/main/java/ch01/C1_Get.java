@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 // url 수동으로 할당하기 ("context? 후의 url") ( Tomcat이 풀주소 할당 http://~ )
 @WebServlet("/ch01/get/add") // > Annotation의 값은 context 내에서 유일해야함
-public class C1_Get extends HttpServlet {  
+public class C1_Get extends HttpServlet {  //servlet을 직접 만들기 - 불편해서 이젠 jsp를 이용한다.
 	@Override // 기본 메소드들
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 		throws ServletException, IOException {

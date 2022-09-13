@@ -12,19 +12,33 @@
 	로그인 실패 시, 로그인 폼으로 이동한다.
 	이때, 위 폼 아래에, 에러 메시지를 출력한다.
  -->
-
-main page <br>
-
 <%
-	if(request.getParameter("inputId") == null) {
+	Object userId = session.getAttribute("userId");
+	if(userId == null) {
 %>
-		<a href='login.jsp'>logIn</a>
+		<a href='login.jsp'>로그인</a>
 <%
 	} else {
 %>
-
-<%= application.getAttribute("id") %>님, 환영합니다.
- 	<a href='logout.jsp'>logOut</a>
+		<%= userId %>님, 환영합니다. &nbsp;
+		<a href='logout.jsp'>로그아웃</a>
 <%
 	}
 %>
+
+
+<!-- 내가한거 ▼ 
+%
+	if(request.getParameter("inputId") == null) {
+%>
+		<a href='login.jsp'>logIn</a>
+%
+	} else {
+%>
+
+%= session.getAttribute("id") %>님, 환영합니다.
+ 	<a href='logout.jsp'>logOut</a>
+%
+	}
+%>
+-->
