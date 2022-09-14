@@ -2,14 +2,27 @@
 <%@ page import='java.util.List, java.util.ArrayList' %>
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%
-	String[] products = request.getParameterValues("product");
-	List<String> cart = new ArrayList<>();
-
-	if(products != null && products.length > 0) {
-			for(String product: products){
-				cart.add(product);
-			}
-			session.setAttribute("cart", cart);
+	String[] items = request.getParameterValues("item");
+	if(items != null && items.length > 0) {
+		List<String> bucket = null;
+		
+		Object bucketObj = session.getAttribute("bucket");
+		if(bucketObj == null) {
+			bucket = new ArrayList<>();
+			session.setAttribute("bucket", bucket);
+		} else bucket = (List<String>)bucketObj;
+		
+		for(String item: items)
+			bucket.add(item);
+%>
+		<c:redirect url='main.jsp'/>
+<%
+	} else { 
+%>
+	<c:redirect url='main.jsp'>
+		<c:param name='msg' value='장바구니에 담을 물건을 선택해주세요.'/>
+	</c:redirect>
+<%
 	}
 %>
-<c:redirect url='cartOut.jsp'/> <!-- 장바구니 확인 -->
+<c:redirect url='cartOut.jsp'/>

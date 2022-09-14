@@ -2,7 +2,8 @@
 <%@ page import='java.util.List, java.util.ArrayList' %>
 <a href='main.html'>메인</a>
 <h3>장바구니</h3>
-<%  //cart 배열을 session에 넣는 순간 String으로 casting 됨
+<%  // cart 배열을 session에 넣는 순간 String으로 casting 됨?
+	// Attribute의 타입은 Object 이다.
    Object cartObj = session.getAttribute("cart");
 
    if(cartObj != null) {

@@ -1,17 +1,16 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
-<h3>상품</h3>
+<h2>컴퓨터 가게</h2>
 <form action='cartAddProc.jsp' method='post'>
-	<ul> <!-- 노트북이라고 화면에 노출시켜야해서 한글씀 -->
-		<li>노트북 <input type='checkbox' name='product' value='노트북'></li>
-		<li>모니터 <input type='checkbox' name='product' value='모니터'></li>
-		<li>마우스 <input type='checkbox' name='product' value='마우스'></li>
+	<ul>
+		<li>본체<input type='checkbox' name='item' value='본체'></li>
+		<li>모니터 <input type='checkbox' name='item' value='모니터'></li>
+		<li>키보드 <input type='checkbox' name='item' value='키보드'></li>
+		
+		<button type='submit'>담기</button>
+		<button type='submit' formaction='cartOut.jsp'>내 장바구니</button>
 	</ul>
-	<button type='submit'>담기</button>
-	<button type='submit' formaction='cartOut.jsp'>보기</button>
 </form>
-
-<!-- 
-	장바구니 - user별 업무
-	
-	과제 > 삭제기능추가, 오버라이드, 장바구니에 물건이 없습니다 
- -->
+<%
+	String msg = request.getParameter("msg");
+	if(msg != null) out.println(msg);
+%>

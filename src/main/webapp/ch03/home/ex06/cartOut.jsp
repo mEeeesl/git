@@ -1,28 +1,30 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 <%@ page import='java.util.List, java.util.ArrayList' %>
-<a href='main.jsp'>메인</a>
-<h3>장바구니</h3>
-<%  //cart 배열을 session에 넣는 순간 String으로 casting 됨
-   Object cartObj = session.getAttribute("cart");
+<a href='main.jsp'>Home</a>
 
-   if(cartObj != null) {
-      List<String> cart = (List<String>)cartObj;
-      if(cart.size() > 0) {   // 물건이 있으면
+<h2>내 장바구니</h2> 
+<%
+	Object bucketObj = session.getAttribute("bucket");
+	if(bucketObj != null) {
+		List<String> bucket = (List<String>)bucketObj;
+		if(bucket.size() > 0) {
 %>
-	<form action='cartDelProc.jsp' method='post'>
-         <ul>
+			<form method='post'>
+				<ul>
 <%
-            for(String product: cart) {
-%>         
-               <li><%= product %>  <input type='checkbox' name='delItem' value='delItem'/> </li>
+					for(String item: bucket) {
+%>				
+						<li> <%= item %> <input type='checkbox' name='item' value='<%= item %>'></li>
 <%
-            }
-%>
-         </ul>
-         <button type='submit'>구매</button>
-         <button type='submit' formaction='cartDelProc.jsp'>삭제</button>
-	</form>
-<%
-      } else out.println("장바구니에 물건이 없습니다.");
-   } else out.println("장바구니가 없습니다.");
+					}
+%>						
+				</ul>
+				<button type='submit' formaction='buy.jsp'>구매하기</button>
+				<button type='submit' formaction='cartDelProc.jsp'>삭제하기</button>
+			</form>
+<%			
+			String msg = request.getParameter("msg");
+			if(msg != null) out.println(msg);
+		} else out.println("장바구니에 물건이 없습니다.");
+	} else out.println("장바구니가 없습니다.");
 %>

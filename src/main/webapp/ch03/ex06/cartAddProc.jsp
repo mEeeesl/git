@@ -14,3 +14,8 @@
 	}
 %>
 <c:redirect url='cartOut.jsp'/> <!-- 장바구니 확인 -->
+<!-- 
+	Attribute의 타입은 Object 이다.
+	
+	reponse에 url을 담았다 = redirect
+ -->

@@ -1,7 +1,7 @@
-<meta charset="utf-8"/>
-<h3>상품</h3>
+<%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
+<h3>진열대</h3>
 <form action='cartAddProc.jsp' method='post'>
-	<ul> <!-- 노트북이라고 화면에 노출시켜야해서 한글씀 -->
+	<ul>
 		<li>노트북 <input type='checkbox' name='product' value='노트북'></li>
 		<li>모니터 <input type='checkbox' name='product' value='모니터'></li>
 		<li>마우스 <input type='checkbox' name='product' value='마우스'></li>
@@ -9,10 +9,15 @@
 	<button type='submit'>담기</button>
 	<button type='submit' formaction='cartOut.jsp'>보기</button>
 </form>
- 
+<%
+	String msg = request.getParameter("msg");
+	if(msg != null) out.println(msg);
+%>
+
+
 <!-- 
-	장바구니 - user별 업무
-	
-	과제 > 삭제기능추가, 오버라이드, 장바구니에 물건이 없습니다 
-	
+	1.진열대를 최초로 접한경우
+	2.물건을 선택하지 않고, 담기 눌렀을경우
+	3.장바구니 담고 다시 돌아온경우
+
  -->

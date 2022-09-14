@@ -1,0 +1,29 @@
+<meta charset="utf-8"/>
+<nav>
+	<a href='cookieGen.jsp'><button>생성</button></a>
+	<a href='cookieOut.jsp'><button>조회</button></a>
+	<a href='cookieFix.jsp'><button>수정</button></a>
+	<a href='cookieDel.jsp'><button>삭제</button></a>
+</nav>
+
+<!-- 
+	
+	Attribute의 타입은 Object였고, 
+	
+	쿠키의 data type = text
+	서버에 생성할때도 text로 변환할 수 있는 String으로 작성해야한다.
+
+	Attribute로 Object만들고	
+	시리얼라이징해서 text로 바꾼담에 쿠키에 저장하는식이다.	
+ 
+ -->
+ 
+<!-- 
+	response.addCookie("",""); 생성
+	cookie.getName(); 읽기
+	수정, 삭제는 그냥 덮어쓰기
+	
+	client가 하는일
+	1. response에 쿠키를 저장
+	2. request에 쿠키를 골라 담는다
+ -->
