@@ -1,0 +1,22 @@
+<meta charset="utf-8"/>
+<nav>
+	<a href='cookieGen.jsp'>생성</a>
+	<a href='cookieOut.jsp'>조회1</a> <!-- 조회됨 -->
+	<a href='sub/cookieOut.jsp'>조회2</a> <!-- 조회됨 -->
+	<a href='../case02/cookieOut.jsp'>조회3</a> <!-- path가 달라서 조회안됨 -->
+</nav>
+
+<!-- 
+	cookieGen해서 생성한 쿠키의 domain 값은 localhost
+	cookieGen해서 생성한 쿠키의 path 값은 /servlet/ch04/ex02/case01 
+
+	쿠키를 생성한 서블릿의 도메인 path 값을 가져옴
+	
+	domain은 다 localhost
+	
+	생성, 조회1 path = /servlet/ch04/ex02/case01/ - 조회가능
+	
+	조회2 path = /servlet/ch04/ex02/case01/sub/ - path가 다르지만 조회가능
+	
+	조회3 path = /servlet/ch04/ex02/case02/ - path가 달라서 조회 불가
+ -->
